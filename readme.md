@@ -9,3 +9,5 @@ https://www.youtube.com/watch?v=WFzRy8KVcrM&t=1733s
 ## Flask API folder structure, Application Factory, flaskenv, and more
 
 ## Flask API Blueprints
+
+## Route Protection
