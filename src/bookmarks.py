@@ -1,3 +1,4 @@
+from flasgger.utils import swag_from
 from flask_jwt_extended.view_decorators import jwt_required
 from src.constants.http_status_codes import HTTP_200_OK, HTTP_201_CREATED, HTTP_204_NO_CONTENT, HTTP_400_BAD_REQUEST, HTTP_404_NOT_FOUND, HTTP_409_CONFLICT
 from flask import Blueprint, request
@@ -153,6 +154,7 @@ def editbookmark(id):
 
 @bookmarks.get("/stats")
 @jwt_required()
+@swag_from('./docs/bookmarks/stats.yaml')
 def get_stats():
     current_user = get_jwt_identity()
     data = []
